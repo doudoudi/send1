@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doudou Diatta | Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+html { scroll-behavior: smooth; }
+
+.card { transition: all 0.4s; }
+.card:hover { transform: translateY(-10px) scale(1.02); }
+
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+input, textarea, button { transition: all 0.3s; }
+input:focus, textarea:focus { outline: none; border-color: #3b82f6; }
+button:hover { transform: scale(1.05); }
+</style>
+</head>
+
+<body class="bg-gray-950 text-gray-200">
+
+<!-- NAVBAR -->
+<header class="fixed w-full bg-gray-900 shadow z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-5">
+    <h1 class="text-2xl font-bold text-blue-500">Doudou Diatta</h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="#home" class="hover:text-blue-400">Accueil</a>
+      <a href="#about" class="hover:text-blue-400">À propos</a>
+      <a href="#formation" class="hover:text-blue-400">Formation</a>
+      <a href="#experience" class="hover:text-blue-400">Expérience</a>
+      <a href="#skills" class="hover:text-blue-400">Compétences</a>
+      <a href="#projects" class="hover:text-blue-400">Projets</a>
+      <a href="#contact" class="hover:text-blue-400">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-gray-200 focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+    <a href="#home" class="block px-6 py-3 hover:bg-gray-700">Accueil</a>
+    <a href="#about" class="block px-6 py-3 hover:bg-gray-700">À propos</a>
+    <a href="#formation" class="block px-6 py-3 hover:bg-gray-700">Formation</a>
+    <a href="#experience" class="block px-6 py-3 hover:bg-gray-700">Expérience</a>
+    <a href="#skills" class="block px-6 py-3 hover:bg-gray-700">Compétences</a>
+    <a href="#projects" class="block px-6 py-3 hover:bg-gray-700">Projets</a>
+    <a href="#contact" class="block px-6 py-3 hover:bg-gray-700">Contact</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center pt-32">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+    <div class="fade-in">
+      <h2 class="text-5xl font-bold mb-6 leading-tight">Développeur Web <br>
+        <span class="text-blue-500">Solutions Digitales</span>
+      </h2>
+      <p class="text-gray-400 mb-8 text-lg">Je conçois des applications web modernes et des plateformes numériques innovantes pour résoudre des problèmes réels.</p>
+      <a href="#projects" class="bg-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600">Voir mes projets</a>
+    </div>
+    <div class="flex justify-center fade-in">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" class="rounded-2xl shadow-xl w-96">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+    <h2 class="text-4xl font-bold mb-6">À propos de moi</h2>
+    <p class="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
+      Je suis un développeur web passionné par la création de solutions numériques innovantes.  
+      Je travaille sur des projets de plateformes web, applications digitales et solutions technologiques pour améliorer les services en Afrique.
+    </p>
+  </div>
+</section>
+
+<!-- FORMATION -->
+<section id="formation" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center fade-in">Formation</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card bg-gray-900 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-laptop-code text-blue-400 mr-2"></i>Développement Web Frontend</h3>
+        <p class="text-gray-400">HTML, Tailwind CSS, JavaScript</p>
+      </div>
+      <div class="card bg-gray-900 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-2"><i class="fab fa-git-alt text-orange-400 mr-2"></i>Git & GitHub</h3>
+        <p class="text-gray-400">Gestion de version et collaboration</p>
+      </div>
+      <div class="card bg-gray-900 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-pencil-ruler text-green-400 mr-2"></i>UI / UX Design</h3>
+        <p class="text-gray-400">Conception d'interfaces modernes</p>
+      </div>
+      <div class="card bg-gray-900 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-graduation-cap text-yellow-400 mr-2"></i>Baccalauréat</h3>
+        <p class="text-gray-400">Sénégal — 2020</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24 bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center fade-in">Expériences Professionnelles</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-briefcase text-blue-400 mr-2"></i>Développeur Web Freelance</h3>
+        <p class="text-blue-400 mb-2">2024 - Présent</p>
+        <p class="text-gray-400">Création de sites web modernes et d'applications web pour particuliers et entreprises.</p>
+      </div>
+      <div class="card bg-gray-800 p-6 rounded-xl shadow-lg fade-in">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-project-diagram text-green-400 mr-2"></i>Développement de projets personnels</h3>
+        <p class="text-blue-400 mb-2">2023 - Présent</p>
+        <p class="text-gray-400">Création de plateformes web, applications digitales et solutions technologiques innovantes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center fade-in">Compétences</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>HTML5</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i>Tailwind CSS</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fab fa-js text-3xl text-yellow-400 mb-2"></i>JavaScript</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fab fa-git-alt text-3xl text-red-500 mb-2"></i>Git</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fab fa-github text-3xl mb-2"></i>GitHub</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fab fa-node-js text-3xl text-green-500 mb-2"></i>Node.js</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fas fa-code text-3xl text-blue-400 mb-2"></i>API REST</div>
+      <div class="card bg-gray-800 p-6 rounded-lg text-center fade-in"><i class="fas fa-mobile-alt text-3xl text-green-400 mb-2"></i>Responsive Design</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-gray-900">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-12 text-center fade-in">Mes Projets</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card bg-gray-800 p-6 rounded-xl shadow-lg fade-in hover:scale-105">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-notes-medical text-blue-400 mr-2"></i>Carnet de Santé Numérique</h3>
+        <p class="text-gray-400">Plateforme permettant de gérer les dossiers médicaux numériques des patients.</p>
+      </div>
+      <div class="card bg-gray-800 p-6 rounded-xl shadow-lg fade-in hover:scale-105">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-concierge-bell text-green-400 mr-2"></i>Plateforme de Services</h3>
+        <p class="text-gray-400">Application connectant les particuliers aux prestataires locaux.</p>
+      </div>
+      <div class="card bg-gray-800 p-6 rounded-xl shadow-lg fade-in hover:scale-105">
+        <h3 class="text-xl font-bold mb-2"><i class="fas fa-shopping-cart text-yellow-400 mr-2"></i>Site E-commerce</h3>
+        <p class="text-gray-400">Plateforme de vente en ligne avec espace vendeur et client.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+    <h2 class="text-4xl font-bold mb-8">Contact</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Nom" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
+      <input type="email" placeholder="Email" class="w-full p-3 rounded bg-gray-800 border border-gray-700">
+      <textarea placeholder="Message" class="w-full p-3 rounded bg-gray-800 border border-gray-700 h-32"></textarea>
+      <button class="bg-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-center p-6">
+  <p class="text-gray-400">© 2026 Doudou Diatta</p>
+  <div class="mt-4 space-x-6 text-xl">
+    <i class="fab fa-github hover:text-blue-400"></i>
+    <i class="fab fa-linkedin hover:text-blue-400"></i>
+    <i class="fab fa-twitter hover:text-blue-400"></i>
+    <i class="fab fa-instagram hover:text-blue-400"></i>
+  </div>
+</footer>
+
+<script>
+// Animation au scroll
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = { threshold: 0.1 };
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+  entries.forEach(entry => {
+    if(!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+// Menu mobile toggle
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('hidden', !menuOpen);
+  menuBtn.innerHTML = menuOpen ? '<i class="fas fa-times text-2xl"></i>' : '<i class="fas fa-bars text-2xl"></i>';
+});
+</script>
+
+</body>
+</html>
